@@ -117,19 +117,6 @@ h1{
     align-items: center;
 }
 
-
-@media screen and (max-width: 768px) {
-  #aside-left, #aside-rigth {
-    display: none;
-  }
-  .contenedor_De_historia{
-     width: 100%;
-    }
-.videos{
-     width: 100%;
-    }
-}
-
 nav {
 	background-color: black;
 	display: flex;
@@ -156,3 +143,48 @@ nav li a {
 nav li a:hover {
 	background-color: black;
 }
+
+@media screen and (max-width: 768px) {
+    body {
+      grid-template: auto 1fr / 1fr;
+    }
+  
+    #header {
+      grid-template-columns: 1fr;
+      grid-row: 1/2;
+      justify-items: center;
+    }
+  
+    #header h1 {
+      margin-bottom: 0.5rem;
+    }
+  
+    #header ul {
+      grid-row: 2/3;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+  
+    #header li {
+      margin: 0 0.5rem;
+    }
+  
+    #main {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+  
+    #aside-left,#aside-rigth {
+      display: none;
+    }
+  
+    .contenedor_De_historia {
+      width: 100%;
+    }
+  
+    .videos {
+      width: 100%;
+      height: auto;
+    }
+  }
